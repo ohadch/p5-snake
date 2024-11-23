@@ -1,0 +1,9 @@
+services:
+    snake:
+      image: python:3.11-slim
+      entrypoint: python3 -m http.server 8000
+      working_dir: /app
+      volumes:
+          - .:/app
+      ports:
+        - "8110:8000"
